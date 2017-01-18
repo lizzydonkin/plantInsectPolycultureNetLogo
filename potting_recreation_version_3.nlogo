@@ -178,7 +178,7 @@ end
 to move  
  let flight-prob flight-tendency ;; get the probability of flying from the quality of the plant
  generate-flight-length
- set heading random 360
+ set heading random 359
  ifelse random-float 1 < flight-prob[ ;; stay or fly   
    set moved true 
    if search-method = "olfactory" [olfactory-movement]
@@ -188,7 +188,7 @@ to move
  
  [ifelse random-float 1 < 0.5 [ ;; staying or intiating a local search (hopping)
    set moved false 
-   set heading random 360 fd 1 
+   set heading random 359 fd 1 
  ]
  [set moved false]
  ]
